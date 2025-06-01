@@ -33,7 +33,7 @@ export const profileDetails: ProfileDetails = {
     },
     {
       category: "Tools",
-      techs: [{ name: "Git" }, { name: "RESTful APIs" }, { name: "SourceTree" }, { name: "Jira" }],
+      techs: [{ name: "Git" }, { name: "RESTful APIs" }, { name: "SourceTree" }, { name: "Postman" }, { name: "Jira" }],
     },
   ],
   projects: [
@@ -175,6 +175,7 @@ export const profileDetails: ProfileDetails = {
       company: "PH Live Music LTD",
       location: "Angeles, Pampanga",
       workSetup: "Remote",
+      jobType: "Contract",
       position: "Junior Frontend Engineer",
       techsUsed: [
         { name: "Next.js" },
@@ -191,6 +192,7 @@ export const profileDetails: ProfileDetails = {
       company: "Three Enix Consulting Sdn Bhd",
       location: "Kuala Lumpur, Malaysia",
       workSetup: "Remote",
+      jobType: "Contract",
       position: "Software Engineer",
       techsUsed: [
         { name: "HTML/CSS" },
@@ -207,6 +209,7 @@ export const profileDetails: ProfileDetails = {
       company: "Hooli Software Inc",
       location: "Marilao, Bulacan",
       workSetup: "Remote",
+      jobType: "Full-time",
       position: "Software Engineer",
       techsUsed: [
         { name: "React.js" },
@@ -224,6 +227,7 @@ export const profileDetails: ProfileDetails = {
       company: "Hooli Software Inc",
       location: "Marilao, Bulacan",
       workSetup: "Remote",
+      jobType: "Full-time",
       position: "Software Engineer Intern",
       techsUsed: [
         { name: "React.js" },

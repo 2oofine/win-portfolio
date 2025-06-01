@@ -5,6 +5,7 @@ export type WorkExperience = {
   location: string;
   position: string;
   workSetup: string;
+  jobType: string;
   startDate: Date;
   endDate: Date | string;
   techsUsed: Tech[];
