@@ -1,9 +1,9 @@
-import { ThemeToggler } from "@/components/theme-toggler";
+import HeroSection from "@/pages/home/sections/hero";
 
 export default function Home() {
   return (
     <div className="font-raleway">
-      <ThemeToggler />
+      <HeroSection />
     </div>
   );
 }
