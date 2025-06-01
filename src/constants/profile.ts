@@ -1,8 +1,24 @@
 import { ProfileDetails } from "@/types/details";
+import {
+  FaAws,
+  FaBootstrap,
+  FaGitAlt,
+  FaGithub,
+  FaGolang,
+  FaJava,
+  FaJira,
+  FaLinkedin,
+  FaReact,
+  FaSass,
+  FaSourcetree,
+} from "react-icons/fa6";
+import { GiBearFace, GiFlowerTwirl } from "react-icons/gi";
+import { SiNextdotjs, SiPostgresql, SiPostman, SiRedux, SiShadcnui, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { TbApi } from "react-icons/tb";
 
 export const profileDetails: ProfileDetails = {
   name: "Sherwin Romero",
-  description: "A front-end web developer",
+  profession: "Full-Stack Web Developer specializing in frontend technologies",
   contactInfo: {
     email: "it.sherwinromero@gmail.com",
   },
@@ -10,30 +26,36 @@ export const profileDetails: ProfileDetails = {
     {
       category: "Primary tech stack",
       techs: [
-        { name: "React.js" },
-        { name: "Next.js" },
-        { name: "TypeScript" },
-        { name: "TailwindCSS" },
-        { name: "shadcn/ui" },
+        { name: "React.js", icon: FaReact },
+        { name: "Next.js", icon: SiNextdotjs },
+        { name: "TypeScript", icon: SiTypescript },
+        { name: "TailwindCSS", icon: SiTailwindcss },
+        { name: "shadcn/ui", icon: SiShadcnui },
       ],
     },
     {
       category: "Have experienced with",
       techs: [
-        { name: "Golang" },
-        { name: "Java" },
-        { name: "PostgreSQL" },
-        { name: "Amazon DynamoDB" },
-        { name: "Redux" },
-        { name: "Zustand" },
-        { name: "flowbite-react/ui" },
-        { name: "Bootstrap" },
-        { name: "Sass" },
+        { name: "Golang", icon: FaGolang },
+        { name: "Java", icon: FaJava },
+        { name: "PostgreSQL", icon: SiPostgresql },
+        { name: "Amazon DynamoDB", icon: FaAws },
+        { name: "Redux", icon: SiRedux },
+        { name: "Zustand", icon: GiBearFace },
+        { name: "flowbite-react/ui", icon: GiFlowerTwirl },
+        { name: "Bootstrap", icon: FaBootstrap },
+        { name: "Sass", icon: FaSass },
       ],
     },
     {
       category: "Tools",
-      techs: [{ name: "Git" }, { name: "RESTful APIs" }, { name: "SourceTree" }, { name: "Postman" }, { name: "Jira" }],
+      techs: [
+        { name: "Git", icon: FaGitAlt },
+        { name: "RESTful APIs", icon: TbApi },
+        { name: "SourceTree", icon: FaSourcetree },
+        { name: "Postman", icon: SiPostman },
+        { name: "Jira", icon: FaJira },
+      ],
     },
   ],
   projects: [
@@ -164,10 +186,12 @@ export const profileDetails: ProfileDetails = {
     {
       name: "LinkedIn",
       url: "https://linkedin.com/in/sherwin-romero",
+      icon: FaLinkedin,
     },
     {
       name: "Github",
       url: "https://github.com/2oofine",
+      icon: FaGithub,
     },
   ],
   workExps: [

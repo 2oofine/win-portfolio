@@ -1,8 +1,8 @@
+import Navbar from "@/components/layout/Navbar";
+import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata, Viewport } from "next";
 import { Pixelify_Sans, Raleway } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import Navbar from "@/components/layout/Navbar";
 
 const pixelifySans = Pixelify_Sans({
   variable: "--font-pixelify-sans",
