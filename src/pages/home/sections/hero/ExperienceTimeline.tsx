@@ -1,9 +1,6 @@
 import { profileDetails } from "@/constants/profile";
-import Link from "next/link";
-import React from "react";
-import { FaFileDownload } from "react-icons/fa";
-import { FaBriefcase } from "react-icons/fa6";
 import Image from "next/image";
+import { FaBriefcase } from "react-icons/fa6";
 import "./styles.css";
 const ExperienceTimeline = () => {
   const { workExps } = profileDetails;
@@ -65,31 +62,20 @@ const ExperienceTimeline = () => {
   return (
     <>
       <div className="flex-col justify-center items-center">
-        <div className="mb-8 text-center">
-          <h1 className="text-3xl font-bold mb-2">My Experiences</h1>
-          <div className="">
-            <div className="flex gap-8 justify-center items-center ">
-              <div>
-                <span className="font-medium">{calculateTotalExperience()}</span> years experience
-              </div>
-              <div>
-                <span className="font-medium ">{getUniqueCompanies()}</span> companies
-              </div>
-              <div>
-                <span className="font-medium ">{getUniqueTechnologies()}</span> technologies
-              </div>
+        {/* <h1 className="text-3xl font-bold mb-2">My Experiences</h1> */}
+        <div className="flex flex-col sm:flex-row items-center justify-center mb-8">
+          {/* Stats */}
+          <div className="flex flex-col md:flex-row gap-6 sm:gap-8 text-center text-lg">
+            <div>
+              <span className="font-medium">{calculateTotalExperience()}</span> years experience
+            </div>
+            <div>
+              <span className="font-medium">{getUniqueCompanies()}</span> companies
+            </div>
+            <div>
+              <span className="font-medium">{getUniqueTechnologies()}</span> technologies
             </div>
           </div>
-
-          <Link
-            href="https://drive.google.com/file/d/17AI5o2ysvVH14zo8q_HfEFKqNFpvAYvB/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center mt-3 gap-2 px-3 py-1.5 sm:px-4 sm:py-2 border border-slate-400 rounded-lg bg-white hover:bg-slate-100 dark:bg-transparent dark:hover:bg-transparent shadow-md transition-transform transform hover:scale-105 text-sm sm:text-base"
-          >
-            <FaFileDownload className="text-base sm:text-lg" />
-            Download CV
-          </Link>
         </div>
       </div>
 

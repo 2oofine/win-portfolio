@@ -3,12 +3,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import { FaFileDownload } from "react-icons/fa";
 
 const IntroAndSkills = () => {
   const { name, profession, techStacks, socials, contactInfo } = profileDetails;
   return (
     <>
-      <div className="mb-5">
+      <div className="mb-3">
         <span className="md:hidden flex items-center justify-center my-5">
           <Image
             src="/profile.jpg"
@@ -36,6 +37,16 @@ const IntroAndSkills = () => {
           {profession}.
         </h1>
       </div>
+
+      <Link
+        href="https://drive.google.com/file/d/17AI5o2ysvVH14zo8q_HfEFKqNFpvAYvB/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-fit inline-flex items-center gap-2 px-3 py-2 border border-slate-400 rounded-md shadow-md hover:bg-slate-100 dark:bg-slate-800 dark:border-slate-600 dark:hover:bg-slate-700 transition-all duration-200 hover:scale-105"
+      >
+        <FaFileDownload className="animate-bounce [animation-duration:1s]" />
+        Download CV
+      </Link>
 
       <div className="flex gap-3 mb-10">
         {socials.map((platform, index) =>
