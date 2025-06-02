@@ -275,7 +275,7 @@ export const profileDetails: ProfileDetails = {
       company: "Hooli Software Inc",
       location: "Marilao, Bulacan",
       workSetup: "Remote",
-      jobType: "Full-time",
+      jobType: "Internship",
       position: "Software Engineer Intern",
       techsUsed: [
         { name: "React.js" },

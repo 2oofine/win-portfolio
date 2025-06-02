@@ -5,7 +5,10 @@ export default function Home() {
   return (
     <div className="font-raleway">
       <HeroSection />
-      <ProjectsSection />
+
+      <div className="relative bg-slate-100">
+        <ProjectsSection />
+      </div>
     </div>
   );
 }

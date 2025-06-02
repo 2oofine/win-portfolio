@@ -4,7 +4,7 @@ import React from "react";
 const ProjectsSection = () => {
   return (
     <Section>
-      <div className="">Projects</div>
+      <div className="flex flex-col">Projects</div>
     </Section>
   );
 };
