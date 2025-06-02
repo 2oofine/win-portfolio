@@ -8,4 +8,6 @@ export type TechStacks = {
 export type Tech = {
   name: string;
   icon?: IconType;
+  baseColor?: string;
+  hoverColor?: string;
 };

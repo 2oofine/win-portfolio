@@ -3,11 +3,11 @@ import { ThemeToggler } from "../theme-toggler";
 import Section from "./Section";
 import React from "react";
 import Link from "next/link";
-
+import "./styles.css";
 const Navbar = () => {
   const { contactInfo } = profileDetails;
   return (
-    <header className="w-full">
+    <header className="w-full fixed top-0 left-0 z-50 bg-white dark:bg-slate-900 shadow-sm">
       <Section className="relative">
         <nav className="grid grid-cols-3 items-center py-5">
           {/* Left Side */}
@@ -27,7 +27,7 @@ const Navbar = () => {
           </div>
 
           {/* Right Side */}
-          <div className="justify-self-end">
+          <div className="justify-self-end relative z-50">
             <ThemeToggler />
           </div>
         </nav>

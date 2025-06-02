@@ -26,38 +26,59 @@ export const profileDetails: ProfileDetails = {
     {
       category: "Primary tech stack",
       techs: [
-        { name: "React.js", icon: FaReact },
-        { name: "Next.js", icon: SiNextdotjs },
-        { name: "TypeScript", icon: SiTypescript },
-        { name: "TailwindCSS", icon: SiTailwindcss },
-        { name: "shadcn/ui", icon: SiShadcnui },
+        { name: "React.js", icon: FaReact, baseColor: "text-blue-500", hoverColor: "group-hover:text-blue-500" },
+        { name: "Next.js", icon: SiNextdotjs, baseColor: "text-black" },
+        { name: "TypeScript", icon: SiTypescript, baseColor: "text-blue-500", hoverColor: "group-hover:text-blue-500" },
+        {
+          name: "TailwindCSS",
+          icon: SiTailwindcss,
+          baseColor: "text-blue-500",
+          hoverColor: "group-hover:text-blue-500",
+        },
+        { name: "shadcn/ui", icon: SiShadcnui, baseColor: "text-black" },
       ],
     },
     {
       category: "Have experienced with",
       techs: [
-        { name: "Golang", icon: FaGolang },
-        { name: "Java", icon: FaJava },
-        { name: "PostgreSQL", icon: SiPostgresql },
-        { name: "Amazon DynamoDB", icon: FaAws },
-        { name: "Redux", icon: SiRedux },
-        { name: "Zustand", icon: GiBearFace },
-        { name: "flowbite-react/ui", icon: GiFlowerTwirl },
-        { name: "Bootstrap", icon: FaBootstrap },
-        { name: "Sass", icon: FaSass },
+        { name: "Golang", icon: FaGolang, baseColor: "text-blue-500", hoverColor: "group-hover:text-blue-500" },
+        { name: "Java", icon: FaJava, baseColor: "text-orange-500", hoverColor: "group-hover:text-orange-500" },
+        { name: "PostgreSQL", icon: SiPostgresql, baseColor: "text-blue-500", hoverColor: "group-hover:text-blue-500" },
+        {
+          name: "Amazon DynamoDB",
+          icon: FaAws,
+          baseColor: "text-orange-500",
+          hoverColor: "group-hover:text-orange-500",
+        },
+        { name: "Redux", icon: SiRedux, baseColor: "text-violet-500", hoverColor: "group-hover:text-violet-500" },
+        { name: "Zustand", icon: GiBearFace, baseColor: "text-amber-900", hoverColor: "group-hover:text-amber-950" },
+        {
+          name: "flowbite-react/ui",
+          icon: GiFlowerTwirl,
+          baseColor: "text-blue-500",
+          hoverColor: "group-hover:text-blue-500",
+        },
+        {
+          name: "Bootstrap",
+          icon: FaBootstrap,
+          baseColor: "text-violet-500",
+          hoverColor: "group-hover:text-violet-500",
+        },
+        { name: "Sass", icon: FaSass, baseColor: "text-pink-500", hoverColor: "group-hover:text-pink-500" },
       ],
     },
     {
       category: "Tools",
       techs: [
-        { name: "Git", icon: FaGitAlt },
-        { name: "RESTful APIs", icon: TbApi },
-        { name: "SourceTree", icon: FaSourcetree },
-        { name: "Postman", icon: SiPostman },
-        { name: "Jira", icon: FaJira },
+        { name: "Git", icon: FaGitAlt, baseColor: "text-orange-500", hoverColor: "group-hover:text-orange-500" },
+        { name: "RESTful APIs", icon: TbApi, baseColor: "text-blue-500", hoverColor: "group-hover:text-blue-500" },
+        { name: "SourceTree", icon: FaSourcetree, baseColor: "text-blue-500", hoverColor: "group-hover:text-blue-500" },
+        { name: "Postman", icon: SiPostman, baseColor: "text-orange-500", hoverColor: "group-hover:text-orange-500" },
+        { name: "Jira", icon: FaJira, baseColor: "text-blue-500", hoverColor: "group-hover:text-blue-500" },
       ],
     },
   ],
+
   projects: [
     {
       name: "PH Live Music",
@@ -211,6 +232,7 @@ export const profileDetails: ProfileDetails = {
       ],
       startDate: new Date("03-17-2025"),
       endDate: "Present",
+      companyLogo: "/companies/plm_logo.jpg",
     },
     {
       company: "Three Enix Consulting Sdn Bhd",
@@ -228,6 +250,7 @@ export const profileDetails: ProfileDetails = {
       ],
       startDate: new Date("05-06-2024"),
       endDate: new Date("01-24-2025"),
+      companyLogo: "/companies/3enix_logo.jpg",
     },
     {
       company: "Hooli Software Inc",
@@ -246,6 +269,7 @@ export const profileDetails: ProfileDetails = {
       ],
       startDate: new Date("06-22-2022"),
       endDate: new Date("02-29-2024"),
+      companyLogo: "/companies/hooli_logo.jpg",
     },
     {
       company: "Hooli Software Inc",
@@ -264,6 +288,7 @@ export const profileDetails: ProfileDetails = {
       ],
       startDate: new Date("03-28-2022"),
       endDate: new Date("06-22-2022"),
+      companyLogo: "/companies/hooli_logo.jpg",
     },
   ],
 };

@@ -9,4 +9,5 @@ export type WorkExperience = {
   startDate: Date;
   endDate: Date | string;
   techsUsed: Tech[];
+  companyLogo: string;
 };
