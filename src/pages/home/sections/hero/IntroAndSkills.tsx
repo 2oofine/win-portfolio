@@ -38,17 +38,7 @@ const IntroAndSkills = () => {
         </h1>
       </div>
 
-      <Link
-        href="https://drive.google.com/file/d/17AI5o2ysvVH14zo8q_HfEFKqNFpvAYvB/view?usp=sharing"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-fit inline-flex items-center gap-2 px-3 py-2 border border-slate-400 rounded-md shadow-md hover:bg-slate-100 dark:bg-slate-800 dark:border-slate-600 dark:hover:bg-slate-700 transition-all duration-200 hover:scale-105"
-      >
-        <FaFileDownload className="animate-bounce [animation-duration:1s]" />
-        Download CV
-      </Link>
-
-      <div className="flex gap-3 mb-10">
+      <div className="flex gap-3">
         {socials.map((platform, index) =>
           platform.icon ? (
             <Link
@@ -72,6 +62,16 @@ const IntroAndSkills = () => {
           </Link>
         </div>
       </div>
+
+      <Link
+        href="https://drive.google.com/file/d/17AI5o2ysvVH14zo8q_HfEFKqNFpvAYvB/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mb-10 w-fit inline-flex items-center gap-2 px-3 py-2 border border-slate-400 rounded-md shadow-md hover:bg-slate-100 dark:bg-slate-800 dark:border-slate-600 dark:hover:bg-slate-700 transition-all duration-200 hover:scale-105"
+      >
+        <FaFileDownload className="animate-bounce [animation-duration:1s]" />
+        Download CV
+      </Link>
 
       {techStacks.map((techStack, index) => (
         <div key={index} className="mb-5">

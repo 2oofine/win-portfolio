@@ -1,8 +1,9 @@
 import Navbar from "@/components/layout/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata, Viewport } from "next";
-import { Pixelify_Sans, Raleway } from "next/font/google";
+import { Pixelify_Sans, Raleway, Syne } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/layout/Footer";
 
 const pixelifySans = Pixelify_Sans({
   variable: "--font-pixelify-sans",
@@ -10,6 +11,10 @@ const pixelifySans = Pixelify_Sans({
 
 const raleway = Raleway({
   variable: "--font-raleway",
+});
+
+const syne = Syne({
+  variable: "--font-syne",
 });
 
 export const metadata: Metadata = {
@@ -37,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${pixelifySans.variable} ${raleway.variable} antialiased bg-background dark:bg-background-dark text-foreground dark:text-foreground-dark `}
+        className={`${pixelifySans.variable} ${raleway.variable} ${syne.variable} antialiased bg-background dark:bg-background-dark text-foreground dark:text-foreground-dark `}
       >
         <ThemeProvider
           attribute="class"
@@ -49,6 +54,7 @@ export default function RootLayout({
           <div className="min-h-screen flex flex-col">
             <Navbar />
             <main className="flex-1 pt-24 md:pt-28">{children}</main>
+            <Footer />
           </div>
         </ThemeProvider>
       </body>

@@ -1,6 +1,6 @@
 import { Tech } from "./tech-stacks";
 
-export type Projects = {
+export type Project = {
   name: string;
   type?: string;
   origin?: string;

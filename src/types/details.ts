@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { Projects } from "./projects";
+import { Project } from "./projects";
 import { TechStacks } from "./tech-stacks";
 import { WorkExperience } from "./work-exp";
 
@@ -9,7 +9,7 @@ export type ProfileDetails = {
   socials: Socials[];
   contactInfo: ContactInfo;
   techStacks: TechStacks[];
-  projects: Projects[];
+  projects: Project[];
   workExps: WorkExperience[];
 };
 

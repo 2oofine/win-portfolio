@@ -84,6 +84,7 @@ export const profileDetails: ProfileDetails = {
       name: "PH Live Music",
       origin: "PH Live Music LTD",
       website: "https://phlivemusic.com/",
+      type: "worked_with",
       description: "PH Live Music is an event booking platform. Filipino Owned, but we want it to be Globally Heard.",
       contribution:
         "Implemented UI designs for a client-facing website showcasing live events, venues, and artists, while contributing to the development and enhancement of the admin dashboard to support content and event management workflows.",
@@ -108,11 +109,31 @@ export const profileDetails: ProfileDetails = {
       ],
     },
     {
+      name: "Host Quest LLC",
+      origin: "Host Quest LLC",
+      repository: "https://github.com/2oofine/host-quest-llc",
+      type: "personal",
+      description:
+        "Host Quest LLC connects skilled professionals with businesses, simplifying hiring and helping both find the perfect match.",
+      contribution:
+        "Designed and developed the company website, focusing on an intuitive user experience and digital strategy.",
+      techsUsed: [{ name: "Next.js" }, { name: "TypeScript" }, { name: "TailwindCSS" }, { name: "framer-motion" }],
+      assets: [
+        "/projects/host-quest-llc/home.gif",
+        "/projects/host-quest-llc/services.gif",
+        "/projects/host-quest-llc/about-us.gif",
+        "/projects/host-quest-llc/job-seekers.gif",
+        "/projects/host-quest-llc/employers.gif",
+        "/projects/host-quest-llc/contact-us.gif",
+      ],
+    },
+    {
       name: "SaaSConsole",
       origin: "Hooli Software Inc",
       website: "https://app.saasconsole.com/",
+      type: "worked_with",
       description:
-        "A fast and easy SaaS management platform designed to efficiently manage groups of users. Developed to simplify user administration and streamline SaaS operations",
+        "A fast and easy SaaS management platform designed to efficiently manage groups of users. Developed to simplify user administration and streamline SaaS operations.",
       contribution:
         "Integrated key SaaS applications—Google Cloud, Slack, Asana, Hootsuite, and Bitbucket—into a SaaS management platform, enabling efficient user group management.",
       techsUsed: [
@@ -131,15 +152,16 @@ export const profileDetails: ProfileDetails = {
         "/projects/saasconsole/saas-groups.png",
         "/projects/saasconsole/saas-integs.png",
         "/projects/saasconsole/saas-people.png",
-        "/projects/phlivemusic/saas-rbac.png",
+        "/projects/saasconsole/saas-rbac.png",
       ],
     },
     {
       name: "MCIS ELearning",
       origin: "Three Enix Consulting Sdn Bhd",
+      type: "worked_with",
       website: "https://lms-uat.mcis.my/dmz/",
       description:
-        "MCIS eLearning system is to facilitate the management, delivery, and tracking of training programs including attendance and Training room booking. It serves as a centralized hub for organizing and administering learning materials, training programs, assessments, and communication.",
+        "MCIS eLearning streamlines training management, attendance tracking, and room booking in one platform.",
       contribution:
         "Integrated key SaaS applications—Google Cloud, Slack, Asana, Hootsuite, and Bitbucket—into a SaaS management platform, enabling efficient user group management.",
       techsUsed: [
@@ -161,7 +183,7 @@ export const profileDetails: ProfileDetails = {
     },
     {
       name: "PERN Workouts",
-      type: "Personal Project",
+      type: "personal",
       website: "https://pern-workouts.vercel.app/",
       repository: "https://github.com/2oofine/pern-workouts",
       description: "A simple application built with the PERN stack that helps users keep track of their workout todos.",
@@ -180,7 +202,7 @@ export const profileDetails: ProfileDetails = {
     },
     {
       name: "EASI - Easy Access Smart Inventory",
-      type: "Personal Project",
+      type: "personal",
       origin: "Don Honorio Ventura State University",
       downloadLink: "https://drive.google.com/file/d/1sKXobrqjJB965Lkc1xrr-_aROrY8i4Nv/view",
       repository: "https://github.com/2oofine/easi_app",

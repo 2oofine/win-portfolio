@@ -63,7 +63,7 @@ const ExperienceTimeline = () => {
     <>
       <div className="flex-col justify-center items-center">
         {/* <h1 className="text-3xl font-bold mb-2">My Experiences</h1> */}
-        <div className="flex flex-col sm:flex-row items-center justify-center mb-8">
+        <div className="flex flex-col lg:flex-row items-center justify-center mb-8">
           {/* Stats */}
           <div className="flex flex-col md:flex-row gap-6 sm:gap-8 text-center text-lg">
             <div>
@@ -80,15 +80,15 @@ const ExperienceTimeline = () => {
       </div>
 
       <div className="relative pb-8">
-        <div className="absolute left-6 md:left-1/2 top-0 h-full w-px bg-gradient-to-b from-gray-300 via-gray-300 to-transparent md:-translate-x-1/2"></div>
+        <div className="absolute left-6 lg:left-1/2 top-0 h-full w-px bg-gradient-to-b from-gray-300 via-gray-300 to-transparent lg:-translate-x-1/2"></div>
 
         {workExps.map((exp, index) => {
           const isEven = index % 2 === 0;
 
           return (
-            <div key={index} className="relative mb-12 w-full flex pl-14 md:pl-0">
-              <div className={`w-full md:w-1/2 ${isEven ? "md:pr-8" : "md:pl-8 md:ml-auto"}`}>
-                <div className={`flex items-start gap-4 ${isEven ? "md:flex-row-reverse flex-row" : "flex-row"}`}>
+            <div key={index} className="relative mb-12 w-full flex pl-14 lg:pl-0">
+              <div className={`w-full lg:w-1/2 ${isEven ? "lg:pr-8" : "lg:pl-8 lg:ml-auto"}`}>
+                <div className={`flex items-start gap-4 ${isEven ? "lg:flex-row-reverse flex-row" : "flex-row"}`}>
                   <div className="w-12 h-12 bg-gray-100 border border-gray-200 rounded flex items-center justify-center flex-shrink-0 overflow-hidden">
                     {exp.companyLogo ? (
                       <Image
@@ -104,12 +104,12 @@ const ExperienceTimeline = () => {
                   </div>
 
                   {/* Text Content - always left-aligned on mobile */}
-                  <div className={`flex-1 ${isEven ? "md:text-right text-left" : "text-left"}`}>
+                  <div className={`flex-1 ${isEven ? "lg:text-right text-left" : "text-left"}`}>
                     <h3 className="text-lg font-semibold mb-1">{exp.position}</h3>
                     <div className="text-base text-gray-600 dark:text-gray-100 mb-2">{exp.company}</div>
                     <div
                       className={`flex flex-wrap gap-2 text-sm text-gray-500 dark:text-gray-100 ${
-                        isEven ? "md:justify-end justify-start" : "justify-start"
+                        isEven ? "lg:justify-end justify-start" : "justify-start"
                       }`}
                     >
                       <span>{exp.workSetup}</span>
@@ -123,7 +123,7 @@ const ExperienceTimeline = () => {
                 </div>
               </div>
 
-              <div className="absolute left-2 md:left-1/2 top-2 md:-translate-x-1/2 w-8 h-8 flex items-center justify-center">
+              <div className="absolute left-2 lg:left-1/2 top-2 lg:-translate-x-1/2 w-8 h-8 flex items-center justify-center">
                 <div className="w-3 h-3 bg-foreground dark:bg-background rounded-full z-10"></div>
               </div>
             </div>

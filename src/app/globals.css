@@ -54,6 +54,7 @@
   /* FONTS */
   --font-pixelify-sans: var(--font-pixelify-sans);
   --font-raleway: var(--font-raleway);
+  --font-syne: var(--font-syne);
 }
 
 :root {

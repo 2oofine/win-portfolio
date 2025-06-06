@@ -5,8 +5,8 @@ import IntroAndSkills from "./IntroAndSkills";
 const HeroSection = () => {
   return (
     <Section>
-      <div className="flex flex-col gap-3 md:flex-row justify-center md:justify-between">
-        <div className="flex flex-col gap-3 w-full md:w-1/2">
+      <div className="flex flex-col gap-3 lg:flex-row justify-center items-center lg:items-start lg:justify-between">
+        <div className="flex flex-col gap-3 w-full lg:w-1/2">
           <IntroAndSkills />
         </div>
 

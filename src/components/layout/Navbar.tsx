@@ -7,7 +7,7 @@ import "./styles.css";
 const Navbar = () => {
   const { contactInfo } = profileDetails;
   return (
-    <header className="w-full fixed top-0 left-0 z-50 bg-white dark:bg-slate-900 shadow-sm">
+    <header className="w-full fixed top-0 left-0 z-50 bg-white dark:bg-foreground shadow-sm">
       <Section className="relative">
         <nav className="grid grid-cols-3 items-center py-5">
           {/* Left Side */}
@@ -27,7 +27,7 @@ const Navbar = () => {
           </div>
 
           {/* Right Side */}
-          <div className="justify-self-end relative z-50">
+          <div className="justify-self-end relative">
             <ThemeToggler />
           </div>
         </nav>

@@ -6,7 +6,7 @@ export default function Home() {
     <div className="font-raleway">
       <HeroSection />
 
-      <div className="relative bg-slate-100">
+      <div className="relative bg-slate-100 dark:bg-slate-800">
         <ProjectsSection />
       </div>
     </div>
