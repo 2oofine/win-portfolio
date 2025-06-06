@@ -29,7 +29,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects, defaultGrid = 3, 
   const itemsPerPage = isMobile ? 1 : noOfItems;
   const totalPages = Math.ceil((projects?.length || 0) / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentProjects = projects.slice(startIndex, startIndex + itemsPerPage);
+  const currentProjects = (projects ?? []).slice(startIndex, startIndex + itemsPerPage);
 
   const nextPage = () => setCurrentPage((prev) => Math.min(prev + 1, totalPages));
   const prevPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
