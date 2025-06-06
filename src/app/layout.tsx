@@ -1,20 +1,18 @@
 import Navbar from "@/components/layout/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata, Viewport } from "next";
-import { Pixelify_Sans, Raleway, Syne } from "next/font/google";
+import { Pixelify_Sans, Raleway } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
 
 const pixelifySans = Pixelify_Sans({
   variable: "--font-pixelify-sans",
+  preload: true,
 });
 
 const raleway = Raleway({
   variable: "--font-raleway",
-});
-
-const syne = Syne({
-  variable: "--font-syne",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -42,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${pixelifySans.variable} ${raleway.variable} ${syne.variable} antialiased bg-background dark:bg-background-dark text-foreground dark:text-foreground-dark `}
+        className={`${pixelifySans.variable} ${raleway.variable} antialiased bg-background dark:bg-background-dark text-foreground dark:text-foreground-dark `}
       >
         <ThemeProvider
           attribute="class"
