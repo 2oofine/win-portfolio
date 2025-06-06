@@ -8,11 +8,13 @@ import Footer from "@/components/layout/Footer";
 const pixelifySans = Pixelify_Sans({
   variable: "--font-pixelify-sans",
   preload: true,
+  subsets: ["latin"],
 });
 
 const raleway = Raleway({
   variable: "--font-raleway",
   preload: true,
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
