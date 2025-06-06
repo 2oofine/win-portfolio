@@ -27,7 +27,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects, defaultGrid = 3, 
   }, []);
 
   const itemsPerPage = isMobile ? 1 : noOfItems;
-  const totalPages = Math.ceil(projects.length / itemsPerPage);
+  const totalPages = Math.ceil((projects?.length || 0) / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentProjects = projects.slice(startIndex, startIndex + itemsPerPage);
 
@@ -46,37 +46,50 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects, defaultGrid = 3, 
   return (
     <div className="relative flex flex-col gap-4">
       <AnimatePresence mode="wait">
-        <motion.div
-          key={currentPage}
-          initial={{ opacity: 0, y: 5 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -5 }}
-          transition={{ duration: 0.2, ease: "easeOut" }}
-          className={`grid gap-4 ${
-            isMobile
-              ? "grid-cols-1"
-              : defaultGrid === 1
-              ? "grid-cols-1"
-              : defaultGrid === 2
-              ? "grid-cols-1 sm:grid-cols-2"
-              : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
-          }`}
-        >
-          {currentProjects.map((project) => (
-            <motion.div
-              key={project.name}
-              drag={isMobile ? "x" : false}
-              dragConstraints={{ left: 0, right: 0 }}
-              onDragEnd={(_, info) => isMobile && handleSwipe(info.offset.x)}
-              className="touch-pan-y"
-            >
-              <ProjectCard project={project} />
-            </motion.div>
-          ))}
-        </motion.div>
+        {currentProjects && currentProjects.length > 0 ? (
+          <motion.div
+            key={currentPage}
+            initial={{ opacity: 0, y: 5 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -5 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className={`grid gap-4 ${
+              isMobile
+                ? "grid-cols-1"
+                : defaultGrid === 1
+                ? "grid-cols-1"
+                : defaultGrid === 2
+                ? "grid-cols-1 sm:grid-cols-2"
+                : "grid-cols-1 sm:grid-cols-2 md:grid-cols-3"
+            }`}
+          >
+            {currentProjects.map((project) => (
+              <motion.div
+                key={project.name}
+                drag={isMobile ? "x" : false}
+                dragConstraints={{ left: 0, right: 0 }}
+                onDragEnd={(_, info) => isMobile && handleSwipe(info.offset.x)}
+                className="touch-pan-y"
+              >
+                <ProjectCard project={project} />
+              </motion.div>
+            ))}
+          </motion.div>
+        ) : (
+          <motion.div
+            key="empty-state"
+            initial={{ opacity: 0, y: 5 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -5 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="flex flex-col items-center justify-center py-10"
+          >
+            <p className="text-gray-500 dark:text-gray-400 text-lg">No projects found.</p>
+          </motion.div>
+        )}
       </AnimatePresence>
 
-      {totalPages > 1 && (
+      {currentProjects && currentProjects.length > 0 && totalPages > 1 && (
         <>
           {currentPage > 1 && (
             <motion.div
@@ -88,7 +101,7 @@ const ProjectsGrid: React.FC<ProjectsGridProps> = ({ projects, defaultGrid = 3, 
             >
               <Button
                 onClick={prevPage}
-                className="rounded-full h-auto bg-background hover:bg-slate-100 text-foreground  shadow-lg p-3 cursor-pointer"
+                className="rounded-full h-auto bg-background hover:bg-slate-100 text-foreground shadow-lg p-3 cursor-pointer"
                 aria-label="Previous Page"
               >
                 <FaChevronLeft size={16} />

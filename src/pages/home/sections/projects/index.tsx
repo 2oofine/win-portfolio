@@ -6,7 +6,8 @@ import ProjectsGrid from "./ProjectsGrid";
 
 const ProjectsSection = () => {
   const { projects } = profileDetails;
-
+  const workedWithProjects = projects.filter((p) => p.type === "worked_with");
+  const personalProjects = projects.filter((p) => p.type === "personal");
   return (
     <Section className="py-10">
       <div className="">
@@ -20,33 +21,33 @@ const ProjectsSection = () => {
             value="all"
             className="shadow-none data-[state=active]:dark:text-white cursor-pointer relative !bg-transparent border-none font-raleway font-bold p-0 hover:bg-transparent data-[state=active]:bg-transparent group"
           >
-            All
+            All {projects.length > 0 ? `(${projects.length})` : ""}
             <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black dark:bg-white transition-all duration-300 group-hover:w-full group-data-[state=active]:w-full"></span>
           </TabsTrigger>
           <TabsTrigger
             value="worked_with"
             className="shadow-none cursor-pointer data-[state=active]:dark:text-white relative !bg-transparent border-none font-raleway font-bold p-0 hover:bg-transparent data-[state=active]:bg-transparent group"
           >
-            Worked with
+            Worked with {workedWithProjects.length > 0 ? `(${workedWithProjects.length})` : ""}
             <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black dark:bg-white transition-all duration-300 group-hover:w-full group-data-[state=active]:w-full"></span>
           </TabsTrigger>
           <TabsTrigger
             value="personal"
             className="shadow-none cursor-pointer data-[state=active]:dark:text-white relative !bg-transparent border-none font-raleway font-bold p-0 hover:bg-transparent data-[state=active]:bg-transparent group"
           >
-            Personal
+            Personal {personalProjects.length > 0 ? `(${personalProjects.length})` : ""}
             <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-black dark:bg-white transition-all duration-300 group-hover:w-full group-data-[state=active]:w-full"></span>
           </TabsTrigger>
         </TabsList>
 
         <TabsContent value="all">
-          <ProjectsGrid projects={projects} defaultGrid={3} noOfItems={3} />
+          <ProjectsGrid projects={projects} defaultGrid={3} noOfItems={6} />
         </TabsContent>
         <TabsContent value="worked_with">
-          <ProjectsGrid projects={projects.filter((p) => p.type === "worked_with")} defaultGrid={3} noOfItems={6} />
+          <ProjectsGrid projects={workedWithProjects} defaultGrid={3} noOfItems={6} />
         </TabsContent>
         <TabsContent value="personal">
-          <ProjectsGrid projects={projects.filter((p) => p.type === "personal")} defaultGrid={3} noOfItems={6} />
+          <ProjectsGrid projects={personalProjects} defaultGrid={3} noOfItems={6} />
         </TabsContent>
       </Tabs>
     </Section>
