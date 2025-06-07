@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-sherwin-romero.vercel.app/sitemap.xml
