@@ -1,12 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
+import { Project } from "@/types/projects";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import { FiChevronLeft, FiChevronRight, FiExternalLink, FiGithub, FiX } from "react-icons/fi";
+import React, { useState } from "react";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaDownload, FaGithub } from "react-icons/fa6";
+import { FiChevronLeft, FiChevronRight, FiX } from "react-icons/fi";
 import { Button } from "./ui/button";
-import { Project } from "@/types/projects";
 
 interface ProjectCardProps {
   project: Project;
@@ -104,7 +106,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               rel="noopener noreferrer"
               className="flex items-center gap-1  hover:underline text-sm"
             >
-              <FiExternalLink /> Website
+              <FaExternalLinkAlt /> Website
             </Link>
           )}
           {project.repository && (
@@ -114,7 +116,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               rel="noopener noreferrer"
               className="flex items-center gap-1  hover:underline text-sm"
             >
-              <FiGithub /> Repository
+              <FaGithub /> Repository
+            </Link>
+          )}
+          {project.downloadLink && (
+            <Link
+              href={project.downloadLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1  hover:underline text-sm"
+            >
+              <FaDownload /> Download
             </Link>
           )}
         </div>
