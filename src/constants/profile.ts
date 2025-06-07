@@ -105,7 +105,7 @@ export const profileDetails: ProfileDetails = {
         "/projects/phlivemusic/artist-full-profile.png",
         "/projects/phlivemusic/dashboard-events-table.png",
         "/projects/phlivemusic/dashboard-add-event.gif",
-        "/projects/phlivemusic/dasboard-login.png",
+        "/projects/phlivemusic/dashboard-login.png",
       ],
     },
     {
