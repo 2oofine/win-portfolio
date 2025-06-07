@@ -41,6 +41,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION} />
+      </head>
       <body
         className={`${pixelifySans.variable} ${raleway.variable} antialiased bg-background dark:bg-background-dark text-foreground dark:text-foreground-dark `}
       >
