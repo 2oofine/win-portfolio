@@ -1,16 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Other config options here if you have any
-
   async headers() {
     return [
       {
-        source: "/sitemap.xml",
+        // Apply to all pages
+        source: "/(.*)",
         headers: [
           {
             key: "X-Robots-Tag",
-            value: "index, follow", // ✅ allow indexing
+            value: "index, follow",
           },
         ],
       },
