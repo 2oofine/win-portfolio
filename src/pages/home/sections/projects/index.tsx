@@ -18,7 +18,7 @@ const ProjectsSection = () => {
 
   return (
     <Section className="py-10">
-      <motion.div variants={fadeInUp} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
+      <motion.div variants={fadeInUp} initial="hidden" animate="visible">
         <div className="">
           <h2 className="text-3xl font-bold">A Peek Into My Work</h2>
           <h5 className="mb-6">Some projects I&apos;ve been working on</h5>
