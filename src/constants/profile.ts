@@ -253,7 +253,7 @@ export const profileDetails: ProfileDetails = {
         { name: "flowbite-react/ui" },
       ],
       startDate: new Date("03-17-2025"),
-      endDate: "Present",
+      endDate: new Date("06-11-2025"),
       companyLogo: "/companies/plm_logo.jpg",
     },
     {
