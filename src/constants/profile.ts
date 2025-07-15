@@ -112,6 +112,7 @@ export const profileDetails: ProfileDetails = {
       name: "Host Quest LLC",
       origin: "Host Quest LLC",
       repository: "https://github.com/2oofine/host-quest-llc",
+      website: "https://hostquestllc.com/",
       type: "personal",
       description:
         "Host Quest LLC connects skilled professionals with businesses, simplifying hiring and helping both find the perfect match.",
