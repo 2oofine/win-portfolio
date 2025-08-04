@@ -123,7 +123,7 @@ export const profileDetails: ProfileDetails = {
         { name: "TypeScript" },
         { name: "TailwindCSS" },
         { name: "framer-motion" },
-        { name: "Jest" },
+        { name: "Jest & React Testing Library" },
         { name: "Github Actions" },
         { name: "Vercel" },
       ],
