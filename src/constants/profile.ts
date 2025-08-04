@@ -118,7 +118,15 @@ export const profileDetails: ProfileDetails = {
         "Host Quest LLC connects skilled professionals with businesses, simplifying hiring and helping both find the perfect match.",
       contribution:
         "Designed and developed the company website, focusing on an intuitive user experience and digital strategy.",
-      techsUsed: [{ name: "Next.js" }, { name: "TypeScript" }, { name: "TailwindCSS" }, { name: "framer-motion" }],
+      techsUsed: [
+        { name: "Next.js" },
+        { name: "TypeScript" },
+        { name: "TailwindCSS" },
+        { name: "framer-motion" },
+        { name: "Jest" },
+        { name: "Github Actions" },
+        { name: "Vercel" },
+      ],
       assets: [
         "/projects/host-quest-llc/home.gif",
         "/projects/host-quest-llc/services.gif",
